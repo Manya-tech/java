@@ -10,7 +10,7 @@ public class InsertionSortCode {
     }
     
     static void insertionSort(int[] arr){
-        for (int i=0; i<=arr.length-2;i++){
+        for (int i=0; i<arr.length-1;i++){
             int j = i+1;
             while(j>0){
                 if(arr[j]<arr[j-1]){
