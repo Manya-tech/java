@@ -1,25 +1,49 @@
 import java.util.Arrays;
 
 public class testidea {
-    static int c=0;
     public static void main(String[] args) {
-        System.out.println(numberOfSteps(8));
+        
+    int[] arr = {4,2,5,3,1};
+    qsort(arr,0,arr.length-1);
+    System.out.println(Arrays.toString(arr));
+
+        // Arrays.sort(arr);
+        // System.out.println(Arrays.toString(arr));
+        
     }
 
-    
-    public static int numberOfSteps(int num) {
-        
-        if(num==0){
-            return c;
+    static void qsort(int[] nums, int l, int h){
+
+        if(l>=h){
+            return ;
         }
-        
-        if((num&1)==0){
-            c++;
-            return numberOfSteps(num/2);
+
+        int s = l;
+        int e = h;
+        int m = s+(e-s)/2;
+        int pivot = nums[m];
+
+        while(s<=e){
+
+            while(nums[s]<pivot){
+                s++;
+            }
+
+            while(nums[e]>pivot){
+                e--;
+            }
+
+            if(s<=e){
+                int temp = nums[s];
+                nums[s]=  nums[e];
+                nums[e]=temp;
+                s++;
+                e--;
+            }
         }
-        c++;
-        return numberOfSteps(num-1);
-        
+
+        qsort(nums,l,e);
+        qsort(nums,s,h);
     }
     
 }
