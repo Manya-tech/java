@@ -2,7 +2,7 @@ package Recursion.SubsetSubsequenceProblems;
 
 public class countPermutations {
     public static void main(String[] args) {
-        String str =  "abcde";
+        String str =  "abc";
         System.out.println(perm("",str));
     }
 

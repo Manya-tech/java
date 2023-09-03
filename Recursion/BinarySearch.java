@@ -1,6 +1,5 @@
 package Recursion;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class BinarySearch {
@@ -11,6 +10,7 @@ public class BinarySearch {
         int k=scn.nextInt();
         int res = bs(arr,0,arr.length, k);
         System.out.print(res);
+        scn.close();
      }
     
      static int bs(int[] a, int s,int e, int k){
@@ -31,4 +31,5 @@ public class BinarySearch {
         return bs(a,s,e,k);
 
      }
+     
 }
