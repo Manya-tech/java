@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AllDirWithLevel",
+            "request": "launch",
+            "mainClass": "Recursion.Backtracking.AllDirWithLevel",
+            "projectName": "java_2767b9b4"
+        },
+        {
+            "type": "java",
+            "name": "AllDirectionsMaze",
+            "request": "launch",
+            "mainClass": "Recursion.Backtracking.AllDirectionsMaze",
+            "projectName": "java_2767b9b4"
+        },
+        {
+            "type": "java",
+            "name": "MazeWithObstacles",
+            "request": "launch",
+            "mainClass": "Recursion.Backtracking.MazeWithObstacles",
+            "projectName": "java_2767b9b4"
+        },
+        {
+            "type": "java",
+            "name": "PrintPath",
+            "request": "launch",
+            "mainClass": "Recursion.Backtracking.PrintPath",
+            "projectName": "java_2767b9b4"
+        },
+        {
+            "type": "java",
+            "name": "CountPath",
+            "request": "launch",
+            "mainClass": "Recursion.Backtracking.CountPath",
+            "projectName": "java_2767b9b4"
+        },
+        {
+            "type": "java",
             "name": "BubbbleSortwithBreak",
             "request": "launch",
             "mainClass": "Recursion.Dice",
