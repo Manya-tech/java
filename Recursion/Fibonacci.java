@@ -42,6 +42,7 @@ public class Fibonacci {
         int n = scn.nextInt();
         int res = fibr(n);
         System.out.println(res); 
+        scn.close();
     }
     
 }
