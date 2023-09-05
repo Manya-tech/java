@@ -12,6 +12,7 @@ public class MutabilityInArray {
     
         change(arr);
         System.out.print(Arrays.toString(arr));
+        scn.close();
      }
 
      static void change(int[] a){

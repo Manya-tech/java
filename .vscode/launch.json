@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CombinationSum",
+            "request": "launch",
+            "mainClass": "Recursion.CombinationSum",
+            "projectName": "java_2767b9b4"
+        },
+        {
+            "type": "java",
+            "name": "SudokuSolver",
+            "request": "launch",
+            "mainClass": "Recursion.Backtracking.SudokuSolver",
+            "projectName": "java_2767b9b4"
+        },
+        {
+            "type": "java",
+            "name": "NKnightsProblem",
+            "request": "launch",
+            "mainClass": "Recursion.Backtracking.NKnightsProblem",
+            "projectName": "java_2767b9b4"
+        },
+        {
+            "type": "java",
+            "name": "NQueensProblem",
+            "request": "launch",
+            "mainClass": "Recursion.Backtracking.NQueensProblem",
+            "projectName": "java_2767b9b4"
+        },
+        {
+            "type": "java",
             "name": "AllDirWithLevel",
             "request": "launch",
             "mainClass": "Recursion.Backtracking.AllDirWithLevel",
