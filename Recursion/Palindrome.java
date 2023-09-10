@@ -13,7 +13,7 @@ public class Palindrome {
                 return 0;
             }
             // int d = (int)Math.log10(n);
-            int pow = (int)Math.pow(10,(int)(Math.log(n)/Math.log(10)));
+            int pow = (int)Math.pow(10,(int)(Math.log10(n)));
             return (n%10)*pow+rev(n/10);
         }
 

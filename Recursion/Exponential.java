@@ -8,13 +8,14 @@ public class Exponential {
         if (n==0){
             return 1;
         }
-        else if(n%2==0){
-            int y = exp(x,n/2);
-            return y*y;
+       
+        int half = exp(x,n/2);
+        int res = half*half;
+        if(n%2!=0){
+            res*=x;
         }
-        else{
-            return x*exp(x,n-1);
-        }
+
+        return res;
     }
 
     public static void main(String[] args){

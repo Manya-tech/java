@@ -8,7 +8,7 @@
             "type": "java",
             "name": "CombinationSum",
             "request": "launch",
-            "mainClass": "Recursion.CombinationSum",
+            "mainClass": "testidea",
             "projectName": "java_2767b9b4"
         },
         {
