@@ -1,55 +1,80 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Stack;
 
 public class testidea {
+
+    class ListNode {
+         int val;
+         ListNode next;
+         ListNode() {}
+         ListNode(int val) { this.val = val; }
+         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+     }
     public static void main(String[] args) {
-//         [4,0,0,0,0,0]
-// 1
-// [1,2,3,5,6]
-// 5
-        int[] a = {1,2,3,0,0,0};
-        int[] b= {2,5,6};
-        merge(a,3,b,3);
-        System.out.println(Arrays.toString(a));
+        int[] arr = {10,2,-5};
+        System.out.println(Arrays.toString(asteroidCollision(arr)));
     }
 
-    static void merge(int[] nums1, int m, int[] nums2, int n) {
-        
-        int[] a = new int[m];
-        for(int i=0; i<m; i++){
-            a[i]=nums1[i];
-        }
-        
-        int i=0;
-        int j=0;
-        int k=0;
-        while(j<n && i<m){
-            
-            if(a[i]<=nums2[j]){
-                nums1[k]=a[i];
-                i++;
-            }else{
-                nums1[k]=nums2[j];
-                j++;
-            }
-            k++;
-        }
-        
-        while(j<n){
-            
-            nums1[k]=nums2[j];
-            k++;
-            j++;
-        }
-        while(i<m){
-            
-            nums1[k]=a[i];
-            i++;
-            k++;
-        }
-
-        
-        // System.out.println(Arrays.toString(nums2));
-    }
     
+        
+    static int[] asteroidCollision(int[] asteroids) {
+        
+        Stack<Integer> stack = new Stack<>();
+        for (int i : asteroids){
+            if(stack.isEmpty()){
+                stack.push(i);
+            }else{
+                if(i<0){
+                    while(!stack.isEmpty() && stack.peek()>0){
+                   
+                        if(stack.peek()>-1*i){
+                            break;
+                        }else if(stack.peek()==-1*i){
+                            stack.pop();
+                            break;
+                        }else{
+                            stack.pop();
+                            stack.push(i);
+                        }
+                    }else{
+                        stack.push(i);
+                    }
+                }else{
+                    if(stack.peek()<0){
+                        if(-1*stack.peek()>i){
+                            continue;
+                        }else if(-1*stack.peek()==i){
+                            stack.pop();
+                        }else{
+                            stack.pop();
+                            while(!stack.isEmpty()){
+                                if(stack.peek()<0 && -1*stack.peek()<i){
+                                    stack.pop();
+                                }else{
+                                    break;
+                                }
+                            }
+                            stack.push(i);
+                        }
+                    }else{
+                        stack.push(i);
+                    }
+                    
+                }
+            }
+        }
+        int[] ans = new int[stack.size()];
+        for(int i = stack.size()-1; i>=0; i--){
+            ans[i]=stack.pop();
+            
+        }
+        
+        
+        return ans;
+        
+    }
 }
+
+    
+
