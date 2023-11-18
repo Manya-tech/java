@@ -2,7 +2,7 @@ package Tree;
 
 import java.util.Scanner;
 
-public class BinaryTree {
+class BinaryTree {
     
     public BinaryTree(){
 
@@ -48,5 +48,40 @@ public class BinaryTree {
         }
     }
 
-    
+    public void display(){
+        disp(root," ");
+    }
+
+     private void disp(Node node, String indent){
+        if(node==null){
+            return;
+        }
+        System.out.println(indent+node.value);
+        disp(node.left,indent+"\t");
+        disp(node.right,indent+"\t");
+    }
+
+    public void prettyDisplay(){
+        prettyDisplay(root,0);
+    }
+
+    private void prettyDisplay(Node node, int level){
+        if(node==null){
+            return;
+        }
+
+        prettyDisplay(node.right,level+1);
+
+        if(level!=0){
+            for(int i=0; i<level-1; i++){
+                System.out.print("|\t\t");
+            }
+            System.out.println("|---->"+node.value);
+
+        }else{
+            System.out.println(node.value);
+        }
+
+        prettyDisplay(node.left, level+1);
+    }
 }
