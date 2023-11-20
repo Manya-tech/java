@@ -10,11 +10,19 @@ public class Main {
         // tree.populate(scn);
         // tree.prettyDisplay();
 
-        BST tree = new BST();
-        int[] nums = { 5, 2, 7, 1, 4, 6, 9, 8, 3, 10 };
-        tree.populate(nums);
-        System.out.println("Done");
-        tree.display();
+        // BST tree = new BST();
+        // int[] nums = { 5, 2, 7, 1, 4, 6, 9, 8, 3, 10 };
+        // tree.populate(nums);
+        // System.out.println("Done");
+        // tree.display();
+
+        AVL tree = new AVL();
+
+        for(int i=0;i<1000;i++){
+          tree.insert(i);
+        }
+    
+        System.out.println(tree.height());
     }
     
 }
