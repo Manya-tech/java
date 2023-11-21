@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String args[]){
-        // Scanner scn = new Scanner(System.in);
-        // BinaryTree tree = new BinaryTree();
-        // tree.populate(scn);
-        // tree.prettyDisplay();
+        Scanner scn = new Scanner(System.in);
+        BinaryTree tree = new BinaryTree();
+        tree.populate(scn);
+        // tree.display();
+        tree.prettyDisplay();
 
         // BST tree = new BST();
         // int[] nums = { 5, 2, 7, 1, 4, 6, 9, 8, 3, 10 };
@@ -16,13 +17,13 @@ public class Main {
         // System.out.println("Done");
         // tree.display();
 
-        AVL tree = new AVL();
+        // AVL tree = new AVL();
 
-        for(int i=0;i<1000;i++){
-          tree.insert(i);
-        }
+        // for(int i=0;i<1000;i++){
+        //   tree.insert(i);
+        // }
     
-        System.out.println(tree.height());
+        // System.out.println(tree.height());
     }
     
 }
