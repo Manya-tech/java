@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String args[]){
-        Scanner scn = new Scanner(System.in);
-        BinaryTree tree = new BinaryTree();
-        tree.populate(scn);
-        // tree.display();
-        tree.prettyDisplay();
+        // Scanner scn = new Scanner(System.in);
+        // BinaryTree tree = new BinaryTree();
+        // tree.populate(scn);
+        // // tree.display();
+        // tree.prettyDisplay();
 
-        // BST tree = new BST();
-        // int[] nums = { 5, 2, 7, 1, 4, 6, 9, 8, 3, 10 };
-        // tree.populate(nums);
-        // System.out.println("Done");
-        // tree.display();
+        BST tree = new BST();
+        int[] nums = {1,2,3,4,5,6,7};
+        tree.populateSorted(nums);
+        System.out.println("Done");
+        tree.display();
 
         // AVL tree = new AVL();
 
