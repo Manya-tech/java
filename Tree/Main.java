@@ -11,11 +11,11 @@ public class Main {
         // // tree.display();
         // tree.prettyDisplay();
 
-        BST tree = new BST();
-        int[] nums = {1,2,3,4,5,6,7};
-        tree.populateSorted(nums);
-        System.out.println("Done");
-        tree.display();
+        // BST tree = new BST();
+        // int[] nums = {1,2,3,4,5,6,7};
+        // tree.populateSorted(nums);
+        // System.out.println("Done");
+        // tree.display();
 
         // AVL tree = new AVL();
 
@@ -24,6 +24,12 @@ public class Main {
         // }
     
         // System.out.println(tree.height());
+
+        int[] arr = {3, 8, 6, 7, -2, -8, 4, 9};
+    SegmentTree tree = new SegmentTree(arr);
+    tree.display();
+
+    //System.out.println(tree.query(1, 6));
     }
     
 }
