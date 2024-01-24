@@ -21,18 +21,19 @@ public class CycleSortCode {
     // }
 
     static void cycleSort(int[] arr){
-        int i=0;
+        int i=0; 
         while(i<arr.length){
             int correctIn = arr[i]-1;
             if(arr[i]!=arr[correctIn]){
                 swap(arr,i,correctIn);
-            }else{
+            } else{
                 i++;
             }
-            System.out.println(Arrays.toString(arr));
+        }
+            //System.out.println(Arrays.toString(arr));
 
         }
-    }
+    
 
     static void swap(int[] arr, int f, int l){
         int temp = arr[f];

@@ -21,7 +21,7 @@ public class BFS {
     Queue<TreeNode> q = new LinkedList<>();
     q.offer(root);
 
-    while(q.isEmpty()){
+    while(!q.isEmpty()){
         int levelSize = q.size();
         List<Integer> clevel = new ArrayList<>(levelSize);
 
@@ -40,6 +40,35 @@ public class BFS {
     }
 
     return res;
+
+}
+
+public TreeNode findSuccessor(TreeNode root, int key){
+
+    if(root==null){
+        return null;
+    }
+
+    Queue<TreeNode> q = new LinkedList<>();
+    q.offer(root);
+
+    while(!q.isEmpty()){
+            TreeNode node = q.poll();
+            if(node.left!=null){
+                q.offer(node.left);
+            }
+            if(node.right!=null){
+                q.offer(node.right);
+            }
+
+            if(node.val==key){
+                break;
+            }
+        }
+        return q.peek();
+
+    
+
 
 }
 }
